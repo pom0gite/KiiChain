@@ -1,1 +1,15 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
+contract TodoList {
+
+    string[] public tasks;
+
+    function addTask(string memory task) public {
+        tasks.push(task);
+    }
+
+    function getTasksCount() public view returns(uint256) {
+        return tasks.length;
+    }
+}
